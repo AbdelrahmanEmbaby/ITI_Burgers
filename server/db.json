@@ -1,0 +1,177 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Burgers",
+      "svg": "🍔"
+    },
+    {
+      "id": 2,
+      "name": "Fried Chicken",
+      "svg": "🍗"
+    },
+    {
+      "id": 3,
+      "name": "Drinks",
+      "svg": "🍹"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Classic Beef Burger",
+      "price": 300,
+      "category": 1
+    },
+    {
+      "id": 2,
+      "name": "Smash Burger",
+      "price": 250,
+      "category": 1
+    },
+    {
+      "id": 3,
+      "name": "Double Cheese Burger",
+      "price": 300,
+      "category": 1
+    },
+    {
+      "id": 4,
+      "name": "Spicy Chicken Burger",
+      "price": 290,
+      "category": 1
+    },
+    {
+      "id": 5,
+      "name": "BBQ Bacon Burger",
+      "price": 340,
+      "category": 1
+    },
+    {
+      "id": 6,
+      "name": "Mushroom Swiss Burger",
+      "price": 330,
+      "category": 1
+    },
+    {
+      "id": 7,
+      "name": "Vegan Delight Burger",
+      "price": 270,
+      "category": 1
+    },
+    {
+      "id": 8,
+      "name": "Cheesy Jalapeño Burger",
+      "price": 310,
+      "category": 1
+    },
+    {
+      "id": 9,
+      "name": "Truffle Burger",
+      "price": 400,
+      "category": 1
+    },
+    {
+      "id": 10,
+      "name": "Fried Chicken",
+      "price": 335,
+      "category": 2
+    },
+    {
+      "id": 11,
+      "name": "Nashville Fried Chicken",
+      "price": 350,
+      "category": 2
+    },
+    {
+      "id": 12,
+      "name": "Chicken Wings",
+      "price": 275,
+      "category": 2
+    },
+    {
+      "id": 13,
+      "name": "Spicy Fried Chicken",
+      "price": 340,
+      "category": 2
+    },
+    {
+      "id": 14,
+      "name": "Crispy Chicken Strips",
+      "price": 290,
+      "category": 2
+    },
+    {
+      "id": 15,
+      "name": "Buttermilk Fried Chicken",
+      "price": 360,
+      "category": 2
+    },
+    {
+      "id": 16,
+      "name": "Garlic Parmesan Wings",
+      "price": 310,
+      "category": 2
+    },
+    {
+      "id": 17,
+      "name": "Buffalo Wings",
+      "price": 315,
+      "category": 2
+    },
+    {
+      "id": 18,
+      "name": "Honey Glazed Fried Chicken",
+      "price": 355,
+      "category": 2
+    },
+    {
+      "id": 19,
+      "name": "Hot & Spicy Chicken Tenders",
+      "price": 325,
+      "category": 2
+    },
+    {
+      "id": 20,
+      "name": "Coca-Cola",
+      "price": 35,
+      "category": 3
+    },
+    {
+      "id": 21,
+      "name": "Sprite",
+      "price": 35,
+      "category": 3
+    },
+    {
+      "id": 22,
+      "name": "Fanta",
+      "price": 35,
+      "category": 3
+    },
+    {
+      "id": 23,
+      "name": "Pepsi",
+      "price": 35,
+      "category": 3
+    },
+    {
+      "id": 24,
+      "name": "Red Bull",
+      "price": 60,
+      "category": 3
+    },
+    {
+      "id": 25,
+      "name": "Small Water",
+      "price": 15,
+      "category": 3
+    },
+    {
+      "id": 26,
+      "name": "Large Water",
+      "price": 25,
+      "category": 3
+    }
+  ]
+}
