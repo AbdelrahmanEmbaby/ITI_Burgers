@@ -1,12 +1,17 @@
-import { useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import axios from "axios";
 
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
+import Admin from "./pages/Admin";
+
+import { fetchData } from "./util/dataUtil";
 
 import "./App.css";
+
+export const TriggerContext = createContext();
 
 function App() {
   const [cart, setCart] = useState([]);
@@ -59,24 +64,22 @@ function App() {
   const changePage = (page) => setCurrentPage(page);
   const resetPage = () => setCurrentPage(1);
 
+  const [refreshTrigger, setRefreshTrigger] = useState(false);
+  const fireTrigger = () => setRefreshTrigger(!refreshTrigger);
   useEffect(() => {
     const fetchCategories = async () => {
-      try {
-        const { data } = await axios.get("http://localhost:3000/categories");
-        setCategories(() => {
-          const cat = data.map((category) => ({ ...category, selected: true }));
-          cat.unshift({ id: 0, name: "All", selected: true });
-          return cat;
-        });
-      } catch (error) {
-        console.error(error);
-      }
+      const { data } = await fetchData("categories");
+      setCategories(() => {
+        const cat = data.map((category) => ({ ...category, selected: true }));
+        cat.unshift({ id: 0, name: "All", selected: true });
+        return cat;
+      });
     };
 
     const fetchProducts = async () => {
       try {
-        const { data } = await axios.get("http://localhost:3000/products");
-        setProducts(data);
+        const { data } = await fetchData("products");
+        setProducts(data.sort((a, b) => a.category - b.category));
       } catch (error) {
         console.error(error);
       }
@@ -84,37 +87,49 @@ function App() {
 
     fetchCategories();
     fetchProducts();
-  }, []);
+  }, [refreshTrigger]);
   return (
-    <div className="font-[Orbitron] bg-white text-black">
-      <BrowserRouter>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Home
-                searchUtility={{ search, handleSearch, clearSearch }}
-                cartUtility={{ cart, addToCart, removeFromCart }}
-                categoriesUtility={{ categories, changeSelected }}
-                productsUtility={{ products }}
-                paginationUtility={{ currentPage, changePage }}
-              />
-            }
-          />
-          <Route
-            path="/cart"
-            element={
-              <Cart
-                searchUtility={{ search, handleSearch, clearSearch }}
-                cartUtility={{ cart, removeFromCart, clearCart }}
-                categoriesUtility={{ categories, changeSelected }}
-                productsUtility={{ products }}
-              />
-            }
-          />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <TriggerContext.Provider value={{ refreshTrigger, fireTrigger }}>
+      <div className="font-[Orbitron]">
+        <BrowserRouter>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Home
+                  searchUtility={{ search, handleSearch, clearSearch }}
+                  cartUtility={{ cart, addToCart, removeFromCart }}
+                  categoriesUtility={{ categories, changeSelected }}
+                  productsUtility={{ products }}
+                  paginationUtility={{ currentPage, changePage }}
+                />
+              }
+            />
+            <Route
+              path="/cart"
+              element={
+                <Cart
+                  searchUtility={{ search, handleSearch, clearSearch }}
+                  cartUtility={{ cart, removeFromCart, clearCart }}
+                  categoriesUtility={{ categories, changeSelected }}
+                  productsUtility={{ products }}
+                />
+              }
+            />
+            <Route
+              path="/admin"
+              element={
+                <Admin
+                  searchUtility={{ search, handleSearch, clearSearch }}
+                  categoriesUtility={{ categories, changeSelected }}
+                  productsUtility={{ products }}
+                />
+              }
+            />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </TriggerContext.Provider>
   );
 }
 

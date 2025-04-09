@@ -6,12 +6,12 @@ export default function Navbar({ searchUtility }) {
   const searchRef = useRef(null);
   const location = useLocation();
   const navigate = useNavigate();
-  
+
   const handleSearchKeyDown = (e) => {
     if (e.key === "Enter") {
       location.pathname !== "/" && navigate("/");
     }
-  }
+  };
 
   useEffect(() => {
     const handleKeydown = (e) => {
@@ -107,6 +107,9 @@ export default function Navbar({ searchUtility }) {
           </li>
           <li className="hover:underline">
             <Link to="/cart">Cart</Link>
+          </li>
+          <li className="hover:underline">
+            <Link to="/admin">Admin</Link>
           </li>
         </ul>
       </section>
