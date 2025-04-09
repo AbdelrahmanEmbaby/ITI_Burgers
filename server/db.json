@@ -1,177 +1,233 @@
 {
   "categories": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Burgers",
-      "svg": "🍔"
+      "icon": "🍔"
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Fried Chicken",
-      "svg": "🍗"
+      "icon": "🍗"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Drinks",
-      "svg": "🍹"
+      "icon": "🍹"
+    },
+    {
+      "id": "90e3",
+      "name": "Pizza",
+      "icon": "🍕"
+    },
+    {
+      "id": "6bc4",
+      "name": "Main Dish",
+      "icon": "🍽️"
+    },
+    {
+      "id": "ff78",
+      "name": "Fries",
+      "icon": "🍟"
+    },
+    {
+      "id": "04d2",
+      "name": "Japanese",
+      "icon": "🍜"
     }
   ],
   "products": [
     {
-      "id": 1,
       "name": "Classic Beef Burger",
+      "category": 1,
       "price": 300,
-      "category": 1
+      "id": "1"
     },
     {
-      "id": 2,
       "name": "Smash Burger",
+      "category": 1,
       "price": 250,
-      "category": 1
+      "id": "2"
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "Double Cheese Burger",
       "price": 300,
       "category": 1
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Spicy Chicken Burger",
       "price": 290,
       "category": 1
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "BBQ Bacon Burger",
       "price": 340,
       "category": 1
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Mushroom Swiss Burger",
       "price": 330,
       "category": 1
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Vegan Delight Burger",
       "price": 270,
       "category": 1
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Cheesy Jalapeño Burger",
       "price": 310,
       "category": 1
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Truffle Burger",
       "price": 400,
       "category": 1
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Fried Chicken",
       "price": 335,
       "category": 2
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Nashville Fried Chicken",
       "price": 350,
       "category": 2
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Chicken Wings",
       "price": 275,
       "category": 2
     },
     {
-      "id": 13,
+      "id": "13",
       "name": "Spicy Fried Chicken",
       "price": 340,
       "category": 2
     },
     {
-      "id": 14,
+      "id": "14",
       "name": "Crispy Chicken Strips",
       "price": 290,
       "category": 2
     },
     {
-      "id": 15,
+      "id": "15",
       "name": "Buttermilk Fried Chicken",
       "price": 360,
       "category": 2
     },
     {
-      "id": 16,
+      "id": "16",
       "name": "Garlic Parmesan Wings",
       "price": 310,
       "category": 2
     },
     {
-      "id": 17,
+      "id": "17",
       "name": "Buffalo Wings",
       "price": 315,
       "category": 2
     },
     {
-      "id": 18,
+      "id": "18",
       "name": "Honey Glazed Fried Chicken",
       "price": 355,
       "category": 2
     },
     {
-      "id": 19,
+      "id": "19",
       "name": "Hot & Spicy Chicken Tenders",
       "price": 325,
       "category": 2
     },
     {
-      "id": 20,
+      "id": "20",
       "name": "Coca-Cola",
       "price": 35,
       "category": 3
     },
     {
-      "id": 21,
+      "id": "21",
       "name": "Sprite",
       "price": 35,
       "category": 3
     },
     {
-      "id": 22,
+      "id": "22",
       "name": "Fanta",
       "price": 35,
       "category": 3
     },
     {
-      "id": 23,
+      "id": "23",
       "name": "Pepsi",
       "price": 35,
       "category": 3
     },
     {
-      "id": 24,
+      "id": "24",
       "name": "Red Bull",
       "price": 60,
       "category": 3
     },
     {
-      "id": 25,
+      "id": "25",
       "name": "Small Water",
       "price": 15,
       "category": 3
     },
     {
-      "id": 26,
+      "id": "26",
       "name": "Large Water",
       "price": 25,
       "category": 3
+    },
+    {
+      "name": "Barbican",
+      "category": "3",
+      "price": "25",
+      "id": "8fc6"
+    },
+    {
+      "name": "Wagyu Burger",
+      "category": 1,
+      "price": 600,
+      "id": "2139"
+    },
+    {
+      "id": "2e12",
+      "name": "Margherita",
+      "category": "90e3",
+      "price": 250
+    },
+    {
+      "id": "5483",
+      "name": "Steak",
+      "category": "6bc4",
+      "price": 800
+    },
+    {
+      "id": "5f0d",
+      "name": "Small Fries",
+      "category": "ff78",
+      "price": 45
+    },
+    {
+      "id": "ef1b",
+      "name": "Spicy Ramen",
+      "category": "04d2",
+      "price": 430
     }
   ]
 }
