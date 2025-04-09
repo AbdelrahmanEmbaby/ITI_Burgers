@@ -44,7 +44,7 @@ function CartItem({ product, categories, removeFromCart }) {
       className="flex items-center justify-between p-10 border-b-2 "
     >
       <section className="flex items-center gap-10">
-        <p className="text-2xl">{categories[product.category].svg}</p>
+        <p className="text-2xl">{categories.find((category) => category.id == product.category).icon}</p>
         <h3 className="text-2xl">{product.name}</h3>
         <p className="text-2xl">£{product.price}</p>
       </section>
